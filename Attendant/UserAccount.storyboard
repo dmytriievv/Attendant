@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2n4-c4-QiR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--User Account View Controller-->
+        <scene sceneID="iQ1-8W-yZw">
+            <objects>
+                <viewController id="2n4-c4-QiR" customClass="UserAccountViewController" customModule="Attendant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Iz-pQ-16c"/>
+                        <viewControllerLayoutGuide type="bottom" id="heI-h9-F23"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Py9-ha-c6V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdw-rK-eEk">
+                                <rect key="frame" x="20" y="28" width="50" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Button" image="flashIcon"/>
+                                <connections>
+                                    <action selector="flashButton:" destination="2n4-c4-QiR" eventType="touchUpInside" id="ED3-jg-a7A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dts-Um-Nyu">
+                                <rect key="frame" x="250" y="28" width="50" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Button" image="settingsIcon"/>
+                                <connections>
+                                    <segue destination="Uit-r8-rCT" kind="show" id="U54-g1-XmW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-Qr-WFM">
+                                <rect key="frame" x="20" y="478" width="280" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="flashButton" destination="Cdw-rK-eEk" id="O0i-eG-2EW"/>
+                        <outlet property="messageLabel" destination="ycv-Qr-WFM" id="MrF-qU-3Ct"/>
+                        <outlet property="settingsButton" destination="Dts-Um-Nyu" id="Jkt-V8-Kde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAu-UW-hUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="-348"/>
+        </scene>
+        <!--My Info-->
+        <scene sceneID="Ttm-CD-tir">
+            <objects>
+                <viewController id="neb-PF-dMY" customClass="MyInfoViewController" customModule="Attendant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1nt-fG-UhF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLT-GN-F4C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lmd-YL-Stv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A01-YV-xKN">
+                                <rect key="frame" x="110" y="264" width="100" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="neb-PF-dMY" eventType="touchUpInside" id="Jmg-WB-mB5"/>
+                                    <segue destination="f88-Pq-sBW" kind="showDetail" animates="NO" id="ByZ-om-piP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwQ-dU-L2I">
+                                <rect key="frame" x="20" y="72" width="280" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-s0-rwK">
+                                <rect key="frame" x="20" y="120" width="280" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Department Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLd-Tf-Wse">
+                                <rect key="frame" x="20" y="168" width="280" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Info" id="gPu-E3-Mpx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OBe-SQ-IX4">
+                            <connections>
+                                <action selector="cancelButton:" destination="neb-PF-dMY" id="pWR-Qv-VUV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="companyNameLabel" destination="WTa-s0-rwK" id="h0H-ou-BTx"/>
+                        <outlet property="departmentNameLabel" destination="VLd-Tf-Wse" id="dvP-0W-wsS"/>
+                        <outlet property="workerNameLabel" destination="uwQ-dU-L2I" id="GtA-Ox-kzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dj6-h1-loI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-348"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Bht-fI-ZGr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="f88-Pq-sBW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWJ-Qx-YdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AaT-Py-bcO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uit-r8-rCT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oLc-Im-uYr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="neb-PF-dMY" kind="relationship" relationship="rootViewController" id="nsB-XY-w8b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50h-Pw-AHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="-348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flashIcon" width="256" height="256"/>
+        <image name="settingsIcon" width="256" height="256"/>
+    </resources>
+</document>
